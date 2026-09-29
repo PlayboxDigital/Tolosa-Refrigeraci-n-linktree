@@ -49,7 +49,7 @@ export const MINI_LANDING_CONFIG = {
   socials: {
     instagram: {
       handle: '@tolosarefrigeracion',
-      url: 'https://www.instagram.com/tolosarefrigeracion/',
+      url: 'https://www.instagram.com/tolosa.refrigeracion/',
     },
     tiktok: {
       handle: '@tolosarefrigeracion',
