@@ -12,7 +12,6 @@ import { MiniBrandsCarousel } from './components/mini/MiniBrandsCarousel';
 import { MiniMostSearched } from './components/mini/MiniMostSearched';
 import { MiniTechnicianCard } from './components/mini/MiniTechnicianCard';
 import { MiniFooterWeb } from './components/mini/MiniFooterWeb';
-import { AnalyticsInspector } from './components/AnalyticsInspector';
 
 export default function App() {
   return (
@@ -51,9 +50,7 @@ export default function App() {
         <MiniFooterWeb />
 
       </div>
+     </div>
 
-      {/* Discreto monitor de eventos para auditoría de marketing / QA */}
-      <AnalyticsInspector />
-    </div>
   );
 }

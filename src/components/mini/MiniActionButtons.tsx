@@ -1,7 +1,7 @@
 import React from 'react';
-import { ShoppingCart, MessageCircle, ArrowUpRight, ChevronRight } from 'lucide-react';
 import { MINI_LANDING_CONFIG } from '../../data/miniLandingData';
 import { trackEvent } from '../../utils/analytics';
+import { ShoppingCart, MessageCircle, ArrowUpRight, ChevronRight, Calculator } from 'lucide-react';
 
 export const MiniActionButtons: React.FC = () => {
   const handleBuyOnline = () => {
@@ -56,7 +56,43 @@ export const MiniActionButtons: React.FC = () => {
         </div>
       </a>
 
-      {/* 2. HABLAR POR WHATSAPP — Asesoramiento comercial directo */}
+ {/* 2. CALCULADORA DE PRECIOS — Asesoramiento directo */}
+<a
+  href="https://calc-refrigeracion-tolosa.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full group relative overflow-hidden p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#0B1E36] via-[#12395E] to-[#0B1E36] text-white shadow-lg shadow-slate-900/20 hover:shadow-xl transition-all duration-200 active:scale-[0.98] border border-white/10 text-left flex items-center justify-between block"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+  <div className="flex items-center gap-3.5 relative z-10">
+    <div className="w-12 h-12 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center shrink-0">
+      <Calculator className="w-6 h-6 text-white" />
+    </div>
+
+    <div>
+      <div className="flex items-center gap-2">
+        <span className="text-base sm:text-lg font-black tracking-tight font-display uppercase">
+          CALCULADORA DE PRECIOS
+        </span>
+
+        <span className="bg-[#04A9DF] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+          Herramienta
+        </span>
+      </div>
+
+      <p className="text-xs text-slate-200 font-medium mt-0.5">
+        Calculá precios y costos de forma rápida
+      </p>
+    </div>
+  </div>
+
+  <div className="w-9 h-9 rounded-xl bg-white text-[#0B1E36] flex items-center justify-center shrink-0 shadow-sm group-hover:translate-x-1 transition-transform relative z-10">
+    <ArrowUpRight className="w-5 h-5" />
+  </div>
+</a>
+
+      {/* 3. HABLAR POR WHATSAPP — Asesoramiento comercial directo */}
       <a
         href={MINI_LANDING_CONFIG.whatsappCommercialUrl}
         target="_blank"

@@ -27,7 +27,7 @@ export interface BrandPartner {
 
 export const MINI_LANDING_CONFIG = {
   brandName: 'Tolosa Refrigeración',
-  tagline: 'Todo para refrigeración y aire acondicionado.',
+  tagline: 'Todo lo que necesitas en un solo lugar.',
   categoriesPill: ['Equipos', 'Repuestos', 'Herramientas', 'Gases', 'Accesorios'],
   
   // URLs reales oficiales absolutas
