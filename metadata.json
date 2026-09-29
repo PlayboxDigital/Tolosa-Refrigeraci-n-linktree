@@ -1,0 +1,8 @@
+{
+  "name": "Tolosa Refrigeración | Tienda Online Oficial",
+  "description": "Todo para refrigeración y climatización en un solo lugar. Equipos, herramientas, gases refrigerantes, repuestos e insumos. Comprá online con envíos a todo el país.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
