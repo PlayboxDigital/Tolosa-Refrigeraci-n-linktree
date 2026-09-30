@@ -59,8 +59,18 @@ export const MiniOffersBlock: React.FC = () => {
                 target={isWebOffer ? '_self' : '_blank'}
                 rel={isWebOffer ? undefined : 'noopener noreferrer'}
                 onClick={() => handlePromoClick(promo)}
-                className="group block bg-white rounded-xl p-3 border border-slate-200/90 hover:border-[#04A9DF]/60 shadow-xs hover:shadow-sm transition-all duration-200 text-left"
+                className="group relative block bg-white rounded-xl p-3 border border-slate-200/90 hover:border-[#04A9DF]/60 shadow-xs hover:shadow-sm transition-all duration-200 text-left"
               >
+                {promo.whatsappMessage && (
+                  <span
+                    aria-hidden="true"
+                    title="Se abre WhatsApp"
+                    className="absolute right-3 top-1.5 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-[#25D366]/15 bg-[#25D366]/10"
+                  >
+                    <img src="/whatsapp-icon.svg" alt="" className="h-[17px] w-[17px]" />
+                  </span>
+                )}
+
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-14 rounded-lg bg-white border border-slate-100 shrink-0 overflow-hidden flex items-center justify-center">
                     <img
