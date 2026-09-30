@@ -33,6 +33,7 @@ export const MiniMostSearched: React.FC = () => {
       <div className="grid grid-cols-2 gap-2.5">
         {topFourItems.map((item) => {
           const isMensula = item.id === 'mensulas-soportes';
+          const isFullProductImage = item.id === 'mensulas-soportes' || item.id === 'manometros-manifolds' || item.id === 'bombas-de-vacio';
 
           return (
             <a
@@ -44,15 +45,13 @@ export const MiniMostSearched: React.FC = () => {
               className="group block bg-white rounded-2xl border border-slate-200 hover:border-[#04A9DF]/60 shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-[#04A9DF]"
             >
               {/* Contenedor de Imagen oficial para cada categoría */}
-              <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden flex items-center justify-center">
+              <div className={`relative aspect-[4/3] ${isMensula ? 'bg-white' : 'bg-slate-50'} overflow-hidden flex items-center justify-center`}>
                 <img
                   src={item.imageUrl}
                   alt={item.name}
                   referrerPolicy="no-referrer"
-                  className={`w-full h-full object-cover object-center transition-transform duration-300 ${
-                    isMensula 
-                      ? 'scale-110 group-hover:scale-115' 
-                      : 'group-hover:scale-105'
+                  className={`w-full h-full ${isFullProductImage ? 'object-contain bg-white' : 'object-cover object-center'} transition-transform duration-300 ${
+                    isFullProductImage ? '' : 'group-hover:scale-105'
                   }`}
                 />
                 {item.badge && (
